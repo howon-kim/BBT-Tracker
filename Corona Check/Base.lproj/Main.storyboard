@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tjg-3h-AJc">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Binggrae-Bold.otf">
+            <string>Binggrae-Bold</string>
+        </array>
+        <array key="Binggrae.otf">
+            <string>Binggrae</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--코로나 자가검진-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StatusVC" customModule="Corona_Check" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sja-vL-wFj" customClass="Chart" customModule="SwiftChart">
+                                <rect key="frame" x="2" y="142" width="371" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Irz-4e-ac4"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FSB-3C-PLH">
+                                <rect key="frame" x="0.0" y="352" width="375" height="440"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="UIX-Vt-HG0" customClass="StatusTableViewCell" customModule="Corona_Check" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UIX-Vt-HG0" id="eJj-RT-dg0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="36.5 ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71n-p5-SDE">
+                                                    <rect key="frame" x="11" y="11" width="78" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2019.02.14 07:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezD-fW-tLx">
+                                                    <rect key="frame" x="101" y="30" width="300" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Binggrae" family="Binggrae" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상태이상: 의심" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ7-Oz-mXD">
+                                                    <rect key="frame" x="101" y="9" width="300" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfv-yp-1Ey">
+                                                    <rect key="frame" x="101" y="50" width="300" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">기침 | 가래 | 오한 | 목아픔 | 호흡곤란
+</string>
+                                                    <fontDescription key="fontDescription" name="Binggrae" family="Binggrae" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="ezD-fW-tLx" id="Xhs-IR-mEh"/>
+                                            <outlet property="evaluateLabel" destination="oZ7-Oz-mXD" id="6Wn-J4-qZl"/>
+                                            <outlet property="statusLabel" destination="Nfv-yp-1Ey" id="ZDu-LT-mn9"/>
+                                            <outlet property="tempLabel" destination="71n-p5-SDE" id="zzg-Ke-mD8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="체온추이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOI-Nx-WXd">
+                                <rect key="frame" x="20" y="98" width="63" height="34"/>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIT-h5-6s9">
+                                <rect key="frame" x="323" y="98" width="32" height="34"/>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="16"/>
+                                <state key="normal" title="추가">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nmX-fJ-R4H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FSB-3C-PLH" firstAttribute="top" secondItem="sja-vL-wFj" secondAttribute="bottom" constant="10" id="7tT-RV-py1"/>
+                            <constraint firstItem="FSB-3C-PLH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Zq-6l-VsV"/>
+                            <constraint firstAttribute="trailing" secondItem="sja-vL-wFj" secondAttribute="trailing" constant="2" id="C84-7k-K7l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rIT-h5-6s9" secondAttribute="trailing" constant="20" id="Cg5-l7-J6a"/>
+                            <constraint firstItem="EOI-Nx-WXd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="IEj-PV-rdu"/>
+                            <constraint firstItem="EOI-Nx-WXd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JaC-aW-4cK"/>
+                            <constraint firstAttribute="bottom" secondItem="FSB-3C-PLH" secondAttribute="bottom" constant="20" symbolic="YES" id="M6d-Yh-lKs"/>
+                            <constraint firstItem="EOI-Nx-WXd" firstAttribute="height" secondItem="rIT-h5-6s9" secondAttribute="height" id="Nmo-X1-A7n"/>
+                            <constraint firstItem="sja-vL-wFj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="m2O-gS-AkT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FSB-3C-PLH" secondAttribute="trailing" id="xhJ-a9-OkQ"/>
+                            <constraint firstItem="sja-vL-wFj" firstAttribute="top" secondItem="rIT-h5-6s9" secondAttribute="bottom" constant="10" id="xxz-B0-lzA"/>
+                            <constraint firstItem="rIT-h5-6s9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zYc-qH-ntt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="코로나 자가검진" id="032-ag-TkZ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="woe-dQ-lLv"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chart" destination="sja-vL-wFj" id="1Qx-EI-Qdg"/>
+                        <outlet property="tableView" destination="FSB-3C-PLH" id="r3A-yb-5QM"/>
+                        <segue destination="XuG-eK-KNn" kind="show" identifier="toAddSymptom" id="Gqc-sC-fIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946.4000000000001" y="136.69950738916256"/>
+        </scene>
+        <!--자가검진표-->
+        <scene sceneID="zUi-FJ-qVK">
+            <objects>
+                <viewController id="XuG-eK-KNn" customClass="InputVC" customModule="Corona_Check" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6aU-3E-5zb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(최소 35도에서 최고 43도)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fST-cr-TEx">
+                                <rect key="frame" x="20" y="135" width="335" height="34"/>
+                                <fontDescription key="fontDescription" name="Binggrae" family="Binggrae" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlS-K9-oLh">
+                                <rect key="frame" x="20" y="230" width="335" height="33"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="15"/>
+                                <state key="normal" title="기침여부 (Cough)">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkCough:" destination="XuG-eK-KNn" eventType="touchUpInside" id="ld9-lO-L0r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXd-KD-U0V">
+                                <rect key="frame" x="20" y="278" width="335" height="33"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="15"/>
+                                <state key="normal" title="가래여부 (Sputum)">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkSputum:" destination="XuG-eK-KNn" eventType="touchUpInside" id="bAb-qP-5Bd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9K-GS-fGQ">
+                                <rect key="frame" x="20" y="326" width="335" height="33"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="15"/>
+                                <state key="normal" title="오한여부 (Chills)">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkChill:" destination="XuG-eK-KNn" eventType="touchUpInside" id="oQJ-6Y-tDt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXs-Hs-R7R">
+                                <rect key="frame" x="20" y="374" width="335" height="33"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="15"/>
+                                <state key="normal" title="목 쓰림/목 아픔 (Sore Throat)">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkSoreThroat:" destination="XuG-eK-KNn" eventType="touchUpInside" id="dJh-Wb-1dv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아래 증상이 있을경우 클릭해 주시길 바랍니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXp-eB-XM7">
+                                <rect key="frame" x="20" y="188.66666666666666" width="335" height="21.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="신체온도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh3-oa-eMo">
+                                <rect key="frame" x="20" y="98" width="63" height="34"/>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lva-eI-2M9">
+                                <rect key="frame" x="20" y="422" width="335" height="33"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="15"/>
+                                <state key="normal" title="호흡곤란 (Dyspnea)">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkDyspnea:" destination="XuG-eK-KNn" eventType="touchUpInside" id="K5K-pS-BBg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQE-Tg-rLP">
+                                <rect key="frame" x="20" y="615" width="335" height="35"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Binggrae" family="Binggrae" pointSize="17"/>
+                                <state key="normal" title="제출">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="XuG-eK-KNn" eventType="touchUpInside" id="p93-sL-vO8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본 자가검진은 자체 알고리즘으로 제작되었으며 참고용으로만 사용하시길 바랍니다. 최근 신천지 신도 접촉, 해외여행, 감염지 발생 장소에 방문하셨을 경우, 질병관리본부 1339 로 연락하시길 바랍니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gal-pG-Ecx">
+                                <rect key="frame" x="20" y="665" width="335" height="44"/>
+                                <fontDescription key="fontDescription" name="Binggrae" family="Binggrae" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Lva-eI-2M9" firstAttribute="top" secondItem="hXs-Hs-R7R" secondAttribute="bottom" constant="15" id="2aD-UN-7DB"/>
+                            <constraint firstItem="Uh3-oa-eMo" firstAttribute="leading" secondItem="0Yu-z3-NEa" secondAttribute="leading" constant="20" id="3ow-cH-0Tq"/>
+                            <constraint firstItem="Uh3-oa-eMo" firstAttribute="top" secondItem="0Yu-z3-NEa" secondAttribute="top" constant="10" id="9b1-EN-cum"/>
+                            <constraint firstItem="0Yu-z3-NEa" firstAttribute="bottom" secondItem="gal-pG-Ecx" secondAttribute="bottom" constant="20" id="AEJ-LQ-BQK"/>
+                            <constraint firstItem="Lva-eI-2M9" firstAttribute="leading" secondItem="0Yu-z3-NEa" secondAttribute="leading" constant="20" id="BGP-GC-SjZ"/>
+                            <constraint firstItem="0Yu-z3-NEa" firstAttribute="trailing" secondItem="Lva-eI-2M9" secondAttribute="trailing" constant="20" id="Drp-Ei-N7Y"/>
+                            <constraint firstItem="AlS-K9-oLh" firstAttribute="leading" secondItem="0Yu-z3-NEa" secondAttribute="leading" constant="20" id="E2n-7E-kyY"/>
+                            <constraint firstItem="fST-cr-TEx" firstAttribute="top" secondItem="Uh3-oa-eMo" secondAttribute="bottom" constant="15" id="JYA-vA-dW0"/>
+                            <constraint firstItem="gal-pG-Ecx" firstAttribute="top" secondItem="UQE-Tg-rLP" secondAttribute="bottom" constant="15" id="Jtg-Xd-q3P"/>
+                            <constraint firstItem="gal-pG-Ecx" firstAttribute="leading" secondItem="0Yu-z3-NEa" secondAttribute="leading" constant="20" id="LX8-lW-3kZ"/>
+                            <constraint firstItem="e9K-GS-fGQ" firstAttribute="top" secondItem="lXd-KD-U0V" secondAttribute="bottom" constant="15" id="Myt-4y-ZhX"/>
+                            <constraint firstItem="AlS-K9-oLh" firstAttribute="top" secondItem="cXp-eB-XM7" secondAttribute="bottom" constant="20" id="NlM-5p-L9u"/>
+                            <constraint firstItem="fST-cr-TEx" firstAttribute="leading" secondItem="0Yu-z3-NEa" secondAttribute="leading" constant="20" id="QdM-zJ-LPD"/>
+                            <constraint firstAttribute="trailing" secondItem="cXp-eB-XM7" secondAttribute="trailing" constant="20" symbolic="YES" id="Szv-qc-2ea"/>
+                            <constraint firstItem="UQE-Tg-rLP" firstAttribute="leading" secondItem="0Yu-z3-NEa" secondAttribute="leading" constant="20" id="Yrb-9W-Yp7"/>
+                            <constraint firstItem="hXs-Hs-R7R" firstAttribute="top" secondItem="e9K-GS-fGQ" secondAttribute="bottom" constant="15" id="Za6-US-Elz"/>
+                            <constraint firstItem="0Yu-z3-NEa" firstAttribute="trailing" secondItem="hXs-Hs-R7R" secondAttribute="trailing" constant="20" id="beY-9T-Mmq"/>
+                            <constraint firstItem="lXd-KD-U0V" firstAttribute="top" secondItem="AlS-K9-oLh" secondAttribute="bottom" constant="15" id="bit-h3-aBk"/>
+                            <constraint firstItem="0Yu-z3-NEa" firstAttribute="trailing" secondItem="fST-cr-TEx" secondAttribute="trailing" constant="20" id="dok-6c-IE9"/>
+                            <constraint firstItem="lXd-KD-U0V" firstAttribute="leading" secondItem="0Yu-z3-NEa" secondAttribute="leading" constant="20" id="gWU-78-aFt"/>
+                            <constraint firstItem="cXp-eB-XM7" firstAttribute="top" secondItem="fST-cr-TEx" secondAttribute="bottom" constant="20" id="mrB-o0-epz"/>
+                            <constraint firstItem="0Yu-z3-NEa" firstAttribute="trailing" secondItem="lXd-KD-U0V" secondAttribute="trailing" constant="20" id="oAG-Xs-Cw2"/>
+                            <constraint firstItem="0Yu-z3-NEa" firstAttribute="trailing" secondItem="AlS-K9-oLh" secondAttribute="trailing" constant="20" id="ooQ-Rj-T4h"/>
+                            <constraint firstItem="hXs-Hs-R7R" firstAttribute="leading" secondItem="0Yu-z3-NEa" secondAttribute="leading" constant="20" id="ret-14-0sp"/>
+                            <constraint firstItem="0Yu-z3-NEa" firstAttribute="trailing" secondItem="UQE-Tg-rLP" secondAttribute="trailing" constant="20" id="t30-Mf-koJ"/>
+                            <constraint firstItem="0Yu-z3-NEa" firstAttribute="trailing" secondItem="e9K-GS-fGQ" secondAttribute="trailing" constant="20" id="tS2-bw-AM5"/>
+                            <constraint firstItem="e9K-GS-fGQ" firstAttribute="leading" secondItem="0Yu-z3-NEa" secondAttribute="leading" constant="20" id="vuk-lY-ymY"/>
+                            <constraint firstItem="0Yu-z3-NEa" firstAttribute="trailing" secondItem="gal-pG-Ecx" secondAttribute="trailing" constant="20" id="wn9-Xj-ZBX"/>
+                            <constraint firstItem="cXp-eB-XM7" firstAttribute="leading" secondItem="0Yu-z3-NEa" secondAttribute="leading" constant="20" id="y3p-xx-MMi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Yu-z3-NEa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="자가검진표" id="uPi-SN-V4C"/>
+                    <connections>
+                        <outlet property="DyspneaButton" destination="Lva-eI-2M9" id="Gwd-t6-8hA"/>
+                        <outlet property="chillButton" destination="e9K-GS-fGQ" id="Sxa-YE-YRX"/>
+                        <outlet property="coughButton" destination="AlS-K9-oLh" id="EQl-hG-35m"/>
+                        <outlet property="soreThroatButton" destination="hXs-Hs-R7R" id="Jfe-Vf-bsn"/>
+                        <outlet property="sputumButton" destination="lXd-KD-U0V" id="T7I-Pj-CEn"/>
+                        <outlet property="tempText" destination="fST-cr-TEx" id="pLO-42-SZR"/>
+                        <segue destination="4BZ-BI-183" kind="unwind" identifier="unwindToStatusVC" unwindAction="unwindToStatusVCWithSegue:" id="FPR-ZR-lBn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="659-zK-OH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4BZ-BI-183" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2746.376811594203" y="137.94642857142856"/>
+        </scene>
+        <!--자가검진-->
+        <scene sceneID="W5Z-vB-01g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uL3-wc-MJA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="자가검진" image="pencil.and.ellipsis.rectangle" catalog="system" id="xUV-P6-xuw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XWo-MD-KsQ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="O6f-Hs-7lq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqF-ae-ls7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--질병관리본부-->
+        <scene sceneID="enC-SD-5Gw">
+            <objects>
+                <viewController id="LYc-rg-Irf" customClass="WebViewVC" customModule="Corona_Check" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aju-nt-BIb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ct0-W2-cr7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="질병관리본부" image="safari" catalog="system" id="QI6-kq-l11"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rff-cD-seZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949" y="868"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uFW-6B-JYi">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tjg-3h-AJc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ifc-zP-OKS">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uL3-wc-MJA" kind="relationship" relationship="viewControllers" id="hGf-oV-fpn"/>
+                        <segue destination="LYc-rg-Irf" kind="relationship" relationship="viewControllers" id="8DA-5T-8UB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9g-79-dLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
+        <image name="safari" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
